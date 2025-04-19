@@ -1,8 +1,8 @@
 {
   "fps": {
     "min": 1,
-    "max": 60,
-    "default": 30
+    "max": 90,
+    "default": 60
   },
   
   "language": {
