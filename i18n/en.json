@@ -19,12 +19,9 @@
   "anti-afk-repeat": "Anti-AFK Repeat",
 
   "Authorization": "Authorization",
-  "Serial": "Serial",
   "Enter the code...": "Enter the code...",
   "Get the code": "Get the code",
   "Enter": "Enter",
-  "Copied": "Copied",
-  "The serial number is copied to the buffer": "Serial number copied to clipboard",
   "Information": "Information",
   "The code has been sent": "Code has been sent",
   "Error": "Error",
@@ -35,5 +32,13 @@
   "Reset": "Reset",
   "By default": "Default",
   "Save": "Save",
-  "Subscription expired": "Subscription expired"
+  "Subscription expired": "Subscription expired",
+  "Registration": "Registration",
+  "Telegram ID...": "Telegram ID...",
+  "Enter your Telegram ID": "Enter your Telegram ID",
+  "Name...": "Name...",
+  "Enter your name": "Enter your name",
+  "Submit": "Submit",
+  "The data has been sent": "The data has been sent",
+  "Error when sending data": "Error when sending data"
 }
