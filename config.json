@@ -1,4 +1,7 @@
 {
+  "bot-enabled": true,
+  "anti-afk-enabled": true,
+
   "fps": {
     "min": 1,
     "max": 90,
@@ -8,10 +11,7 @@
   "language": {
     "options": ["en", "ru", "zn"],
     "default": "ru"
-  },
-  
-  "bot-enabled": true,
-  "anti-afk-enabled": true,
+  },  
   
   "process-name": "MTA: San Andreas",
   "process-width": {
