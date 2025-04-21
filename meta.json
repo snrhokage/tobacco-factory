@@ -1,6 +1,7 @@
 {
   "title": "Grind Tobacco Factory",
   "version": "8.0.0",
+  "app-url": "https://drive.google.com/uc?id=1qtn7mnYXG3iC8DgvGpdVsbWPbBbZuFZr",
 
   "events": {
     "onRegister": [
