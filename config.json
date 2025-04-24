@@ -103,6 +103,16 @@
     "default": 240
     }
   ],
+  "bot-trajectories": {
+    "default": [
+      "t",
+      "t**2",
+      "1 - (1 - t)**2",
+      "(1 - cos(t * pi)) / 2",
+      "abs(sin(t * pi * 2.5)) * (1 - t)",
+      "sin(t * pi * 3) * exp(-t * 3) + t"
+    ]
+  },
 
   "anti-afk-grid": {
     "min": 1,
