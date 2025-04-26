@@ -13,6 +13,7 @@
   "bot-spread-color": "颜色容差",
   "bot-die-radius": "死亡标识半径",
   "bot-die-color": "死亡标识颜色",
+  "bot-trajectories": "轨迹",
   "anti-afk-grid": "防挂机网格",
   "anti-afk-radius": "防挂机半径",
   "anti-afk-time": "防挂机时间",
