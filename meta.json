@@ -4,8 +4,7 @@
 
   "app": "TF.exe",
   "urls": {
-    "TF.exe": "TF.exe",
-    "meta.json": "meta.json"
+    "TF.exe": "TF.exe"
   },
 
   "events": {
