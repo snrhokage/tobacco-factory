@@ -2,7 +2,8 @@
   "title": "Grind Tobacco Factory",
   "version": "8.1.0",
   "urls": {
-    "TF": "TF.exe"
+    "TF": "TF.exe",
+    "Meta": "meta.json"
   },
 
   "events": {
