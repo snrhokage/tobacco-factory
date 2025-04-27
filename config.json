@@ -16,9 +16,9 @@
   "bot-cursor-speed": ["t"],
   "bot-radius-x": [215, 245],
   "bot-radius-y": [215, 245],
-  "bot-spread-color": 10,
   "bot-die-radius": [230, 230],
   "bot-die-color": [0, 199, 240],
+  "bot-color-spread": 10,
 
   "anti-afk-grid": 360,
   "anti-afk-radius": 245,
