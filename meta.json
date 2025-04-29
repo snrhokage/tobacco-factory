@@ -1,10 +1,10 @@
 {
-  "title": "Grind Tobacco Factory",
   "version": "9.0.0",
 
-  "languages": ["ru", "en", "zn"],
+  "languages": ["ru"],
 
   "app": "TF.exe",
+
   "urls": {
     "TF.exe": "TF.exe"
   },
