@@ -1,7 +1,7 @@
 {
   "version": "9.0.0",
 
-  "languages": ["ru"],
+  "languages": ["ru", "en"],
 
   "app": "TF.exe",
 

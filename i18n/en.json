@@ -1,0 +1,28 @@
+{
+  "title": "Grind Tobacco Factory",
+  "description": "Lorem ipsum dolor sit amet... [rest of the placeholder Latin text remains unchanged as it's standard filler text]",
+
+  "fps": "Frames per second",
+  "language": "Language",
+  "bot-enabled": "Bot Status",
+  "anti-afk-enabled": "Anti-AFK Status",
+  "process-name": "Process Name",
+  "process-width": "Process Width",
+  "bot-delay": "Delay",
+  "bot-grid": "Grid",
+  "bot-cursor-offset": "Cursor Offset",
+  "bot-radius-x": "X-axis Radius",
+  "bot-radius-y": "Y-axis Radius",
+  "bot-spread-color": "Color Spread",
+  "bot-die-radius": "Die Radius",
+  "bot-die-color": "Die Color",
+  "bot-trajectories": "Trajectories",
+  "anti-afk-grid": "Anti-AFK Grid",
+  "anti-afk-radius": "Anti-AFK Radius",
+  "anti-afk-time": "Anti-AFK Time",
+  "anti-afk-repeat": "Anti-AFK Repeat",
+
+  "Сохранить": "Save",
+  "Сбросить": "Reset",
+  "По умолчанию": "Default"
+}
