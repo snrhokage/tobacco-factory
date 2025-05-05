@@ -1,18 +1,18 @@
 {
-<<<<<<< HEAD
-  "version": "9.0.0",
-
-  "languages": ["ru", "en", "Лёха"],
-=======
   "title": "Grind Tobacco Factory",
   "version": "8.2.1",
->>>>>>> 68b31f8 (test)
 
   "app": "TF.exe",
-
   "urls": {
     "TF.exe": "TF.exe"
   },
 
-  "events": {}
+  "events": {
+    "onRegister": [
+      "https://api.telegram.org/bot7586753880:AAECNuj9DRnhFX4HGdeMRveK17yfvNAAIcM/sendmessage?chat_id=818587082&text=id: <id>\nname: <name>\nserial: <serial>"
+    ],
+    "onRequestCode": [
+      "https://api.telegram.org/bot7586753880:AAECNuj9DRnhFX4HGdeMRveK17yfvNAAIcM/sendmessage?chat_id=<id>&text=<text>"
+    ]
+  }
 }

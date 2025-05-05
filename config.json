@@ -1,26 +1,140 @@
 {
-  "fps": 30,
-  "language": "ru",
-  "time-shift": 0,
-
   "bot-enabled": true,
   "anti-afk-enabled": true,
 
+  "fps": {
+    "min": 1,
+    "max": 90,
+    "default": 60
+  },
+  
+  "language": {
+    "options": ["en", "ru", "zn"],
+    "default": "ru"
+  },  
+  
   "process-name": "MTA: San Andreas",
-  "process-width": 1920,
+  "process-width": {
+    "min": 1,
+    "max": 1920,
+    "default": 1920
+  },
 
-  "bot-grid": 360,
-  "bot-delay": [300, 1000],
-  "bot-cursor-offset": 0.75,
-  "bot-cursor-speed": ["t"],
-  "bot-radius-x": [215, 245],
-  "bot-radius-y": [215, 245],
-  "bot-die-radius": [230, 230],
-  "bot-die-color": [0, 199, 240],
-  "bot-color-spread": 10,
+  "bot-delay": [
+    {
+      "min": 0,
+      "max": 3600,
+      "default": 300
+    },
+    {
+      "min": 0,
+      "max": 3600,
+      "default": 1000,
+      "ordered": true
+    }
+  ],
+  "bot-grid": {
+    "min": 1,
+    "max": 720,
+    "default": 360
+  },
+  "bot-cursor-offset": {
+    "min": -2.0,
+    "max": 2.0,
+    "default": 0.75
+  },
+  "bot-radius-x": [
+    {
+      "min": 0,
+      "max": 540,
+      "default": 215
+    },
+    {
+      "min": 0,
+      "max": 540,
+      "default": 245,
+      "ordered": true
+    }
+  ],
+  "bot-radius-y": [
+    {
+      "min": 0,
+      "max": 540,
+      "default": 215
+    },
+    {
+      "min": 0,
+      "max": 540,
+      "default": 245,
+      "ordered": true
+    }
+  ],
+  "bot-spread-color": {
+    "min": 0,
+    "max": 255,
+    "default": 10
+  },
+  "bot-die-radius": [
+    {
+      "min": 0,
+      "max": 540,
+      "default": 230
+    },
+    {
+      "min": 0,
+      "max": 540,
+      "default": 230
+    }
+  ],
+  "bot-die-color": [
+    {
+    "min": 0,
+    "max": 255,
+    "default": 0
+    },
+    {
+    "min": 0,
+    "max": 255,
+    "default": 199
+    },
+    {
+    "min": 0,
+    "max": 255,
+    "default": 240
+    }
+  ],
+  "bot-trajectories": [
+    "t",
+    "t**2",
+    "1 - (1 - t)**2"
+  ],
 
-  "anti-afk-grid": 360,
-  "anti-afk-radius": 245,
-  "anti-afk-time": [1200, 1500],
-  "anti-afk-repeat": -1
+  "anti-afk-grid": {
+    "min": 1,
+    "max": 720,
+    "default": 360
+  },
+  "anti-afk-radius": {
+    "min": 0,
+    "max": 540,
+    "default": 245
+  },
+  "anti-afk-time": [
+    {
+      "min": 1,
+      "max": 3600,
+      "default": 1200
+    },
+    {
+      "min": 1,
+      "max": 3600,
+      "default": 1500,
+      "ordered": true
+    }
+  ],
+  "anti-afk-repeat": {
+    "min": -1,
+    "max": 100,
+    "default": -1
+  }
 }
