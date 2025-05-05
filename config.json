@@ -1,7 +1,7 @@
 {
   "fps": 30,
   "language": "ru",
-  "time-shuffle": 0,
+  "time-shift": 0,
 
   "bot-enabled": true,
   "anti-afk-enabled": true,
