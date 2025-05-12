@@ -1,13 +1,5 @@
 {
   "version": "9.0.0",
 
-  "languages": ["ru", "en", "Лёха"],
-
-  "app": "TF.exe",
-
-  "urls": {
-    "TF.exe": "TF.exe"
-  },
-
-  "events": {}
+  "languages": ["ru", "en", "Лёха"]
 }
