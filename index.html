@@ -1,110 +1,60 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Мое приложение</title>
-    <style>
-        .app-info-panel {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            max-width: 300px;
-            z-index: 10000;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .app-info-panel h3 {
-            margin: 0 0 10px 0;
-            color: #4fc3f7;
-            font-size: 14px;
-        }
-        
-        .info-item {
-            margin: 5px 0;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .label {
-            color: #bbb;
-        }
-        
-        .value {
-            color: white;
-            font-weight: bold;
-        }
-        
-        .version-badge {
-            display: inline-block;
-            background: #4caf50;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 10px;
-            margin-left: 5px;
-        }
-        
-        .platform-icon {
-            display: inline-block;
-            margin-right: 5px;
-        }
-        
-        /* Иконки платформ */
-        .windows:before { content: "🪟"; }
-        .mac:before { content: "🍎"; }
-        .linux:before { content: "🐧"; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self';
+                   script-src 'self' 'unsafe-inline';
+                   style-src 'self' 'unsafe-inline';
+                   img-src 'self' data: https:;
+                   font-src 'self';
+                   connect-src 'self';
+                   frame-src 'none';
+                   object-src 'none';">
+  <title>Document</title>
 </head>
 <body>
-    <!-- Панель с информацией -->
-    <div id="appInfoPanel" class="app-info-panel" style="display: none;">
-        <h3>📱 Информация о приложении</h3>
-        <div class="info-items">
-            <div class="info-item">
-                <span class="label">Приложение:</span>
-                <span class="value" id="appName">-</span>
-            </div>
-            <div class="info-item">
-                <span class="label">Версия:</span>
-                <span class="value">
-                    <span id="appVersion">-</span>
-                    <span class="version-badge" id="versionBadge">Electron</span>
-                </span>
-            </div>
-            <div class="info-item">
-                <span class="label">Автор:</span>
-                <span class="value" id="appAuthor">-</span>
-            </div>
-            <div class="info-item">
-                <span class="label">Платформа:</span>
-                <span class="value">
-                    <span class="platform-icon" id="platformIcon"></span>
-                    <span id="appPlatform">-</span>
-                </span>
-            </div>
-            <div class="info-item">
-                <span class="label">Сборка:</span>
-                <span class="value" id="buildInfo">-</span>
-            </div>
-            <div class="info-item">
-                <span class="label">Запущено:</span>
-                <span class="value" id="launchTime">-</span>
-            </div>
-        </div>
-    </div>
+  <h1>Electron + HTML Communication</h1>
+    
+    <div id="data-container"></div>
+    
+    <button onclick="getAppInfo()">Получить информацию о приложении</button>
+    <button onclick="getUserData()">Получить путь к данным</button>
+    <button onclick="ttt()">TEST</button>
+    
+    <script>
+        window.electronAPI.onData((event, data) => {
+            console.log('Данные от Electron:', data);
+            displayData(data);
+        });
+        
+        async function getAppInfo() {
+            const info = await window.electronAPI.getAppInfo();
+            displayData(info);
+        }
+        
+        async function getUserData() {
+            const userDataPath = await window.electronAPI.getUserData();
+            displayData({ userDataPath });
+        }
 
-    <!-- Основной контент вашего сайта -->
-    <div id="content">
-        <!-- ваш существующий контент -->
-    </div>
+        async function ttt() {
+            const result = await window.electronAPI.ttt(1, 2, 3, 5);
+            displayData(result);
+        }
+        
+        function displayData(data) {
+            const container = document.getElementById('data-container');
+            container.innerHTML = `
+                <h3>Данные от Electron:</h3>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+            `;
+        }
 
-    <script src="app-info.js"></script>
+        if (window.electronData) {
+            console.log('Глобальные данные:', window.electronData);
+        }
+    </script>
 </body>
 </html>
