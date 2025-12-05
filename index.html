@@ -1,60 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" 
-          content="default-src 'self';
-                   script-src 'self' 'unsafe-inline';
-                   style-src 'self' 'unsafe-inline';
-                   img-src 'self' data: https:;
-                   font-src 'self';
-                   connect-src 'self';
-                   frame-src 'none';
-                   object-src 'none';">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Electron + HTML Communication</h1>
-    
-    <div id="data-container"></div>
-    
-    <button onclick="getAppInfo()">Получить информацию о приложении</button>
-    <button onclick="getUserData()">Получить путь к данным</button>
-    <button onclick="ttt()">TEST</button>
-    
-    <script>
-        window.electronAPI.onData((event, data) => {
-            console.log('Данные от Electron:', data);
-            displayData(data);
-        });
-        
-        async function getAppInfo() {
-            const info = await window.electronAPI.getAppInfo();
-            displayData(info);
-        }
-        
-        async function getUserData() {
-            const userDataPath = await window.electronAPI.getUserData();
-            displayData({ userDataPath });
-        }
-
-        async function ttt() {
-            const result = await window.electronAPI.ttt(1, 2, 3, 5);
-            displayData(result);
-        }
-        
-        function displayData(data) {
-            const container = document.getElementById('data-container');
-            container.innerHTML = `
-                <h3>Данные от Electron:</h3>
-                <pre>${JSON.stringify(data, null, 2)}</pre>
-            `;
-        }
-
-        if (window.electronData) {
-            console.log('Глобальные данные:', window.electronData);
-        }
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+    <script type="module" crossorigin src="./assets/index-Chj6L5z_.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
