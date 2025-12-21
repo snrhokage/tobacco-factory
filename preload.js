@@ -1,8 +1,10 @@
-import { ipcRenderer, contextBridge } from 'electron';
+"use strict";
 
-contextBridge.exposeInMainWorld('electronAPI', {
+const electron = require("electron");
+
+electron.contextBridge.exposeInMainWorld('electronAPI', {
   invoke(...args) {
     const [channel, ...omit] = args;
-    return ipcRenderer.invoke(channel, ...omit);
+    return electron.ipcRenderer.invoke(channel, ...omit);
   },
 });
