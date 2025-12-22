@@ -1,9 +1,16 @@
 const { app, BrowserWindow } = require('electron');
 
+const isDev = !!process.argv.find((e) => e === '--dev' || '-D');
+
 const createWindow = () => {
   win = new BrowserWindow();
-  win.loadURL('https://google.com');
-  
+
+  if (isDev) {
+    win.loadURL('http://localhost:5173');
+    win.webContents.openDevTools();
+  } else {
+    win.loadURL('https://google.com');
+  }
 };
 
 app.on('window-all-closed', () => {
