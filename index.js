@@ -1,13 +1,24 @@
 const { app, BrowserWindow } = require('electron');
 
-console.log(process.argv);
-console.log(process.argv.find((e) => e === '--dev' || '-D'));
-console.log(!!process.argv.find((e) => e === '--dev' || '-D'));
+const CONFIG_FLAGS = {
+  DEV: ['--development', '--dev', '-D'],
+};
 
-const isDev = !!process.argv.find((e) => e === '--dev' || '-D');
+const hasFlag = (flags) => {
+  return flags?.some(flag => process.argv.includes(flag)) || false;
+};
+
+const isDev = hasFlag(CONFIG_FLAGS.DEV);
 
 const createWindow = () => {
-  win = new BrowserWindow();
+  win = new BrowserWindow({
+    width: 1200,
+    height: 732,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    },
+  });
 
   if (isDev) {
     win.loadURL('http://localhost:5173');
