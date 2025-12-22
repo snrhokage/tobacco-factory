@@ -12,13 +12,11 @@ const isDev = hasFlag(CONFIG_FLAGS.DEV);
 
 if (isDev) {
   const fs = require('fs');
-  fs.writeFileSync('test.txt', '123');
-
   const path = require('path');
 
   try {
-    console.log('__dirname', __dirname);
-    fs.writeFileSync(path.join(__dirname, 'test1.txt'), '321');
+    console.log('process.resourcesPath', process.resourcesPath);
+    fs.writeFileSync(path.join(process.resourcesPath, 'test1.txt'), '321');
   } catch {
     console.log('ошибка');
   }
