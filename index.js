@@ -24,7 +24,7 @@ const createWindow = () => {
     win.loadURL('http://localhost:5173');
     win.webContents.openDevTools();
   } else {
-    win.loadURL('https://google.com');
+    win.loadURL('https://snrhokage.github.io/tobacco-factory/');
   }
 };
 
