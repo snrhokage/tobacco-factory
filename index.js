@@ -16,7 +16,10 @@ const createWindow = () => {
     height: 732,
     frame: false,
     webPreferences: {
-      preload: 'https://raw.githubusercontent.com/snrhokage/tobacco-factory/main/preload.js',
+      // preload: 'https://raw.githubusercontent.com/snrhokage/tobacco-factory/main/preload.js',
+      preload: `data:text/javascript,
+        console.log('TEST-CASE');
+      `,
 
       webSecurity: false,
       allowRunningInsecureContent: true,
