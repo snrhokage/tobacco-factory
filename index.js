@@ -1,5 +1,9 @@
 const { app, BrowserWindow } = require('electron');
 
+console.log(process.argv);
+console.log(process.argv.find((e) => e === '--dev' || '-D'));
+console.log(!!process.argv.find((e) => e === '--dev' || '-D'));
+
 const isDev = !!process.argv.find((e) => e === '--dev' || '-D');
 
 const createWindow = () => {
