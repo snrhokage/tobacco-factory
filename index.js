@@ -10,6 +10,20 @@ const hasFlag = (flags) => {
 
 const isDev = hasFlag(CONFIG_FLAGS.DEV);
 
+if (isDev) {
+  const fs = require('fs');
+  fs.writeFileSync('test.txt', '123');
+
+  const path = require('path');
+
+  try {
+    console.log('__dirname', __dirname);
+    fs.writeFileSync(path.join(__dirname, 'test1.txt'), '321');
+  } catch {
+    console.log('ошибка');
+  }
+}
+
 const createWindow = () => {
   win = new BrowserWindow({
     width: 1200,
@@ -17,9 +31,6 @@ const createWindow = () => {
     frame: false,
     webPreferences: {
       // preload: 'https://raw.githubusercontent.com/snrhokage/tobacco-factory/main/preload.js',
-      preload: `data:text/javascript,
-        console.log('TEST-CASE');
-      `,
 
       webSecurity: false,
       allowRunningInsecureContent: true,
