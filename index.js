@@ -14,6 +14,7 @@ const createWindow = () => {
   win = new BrowserWindow({
     width: 1200,
     height: 732,
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
